@@ -1,0 +1,45 @@
+{
+  "name": "gh-description",
+  "version": "0.0.0",
+  "description": "Set and get a GitHub repository description",
+  "license": "MIT",
+  "repository": "RichardLitt/gh-description",
+  "author": {
+    "name": "Richard Littauer",
+    "email": "richard.littauer@gmail.com",
+    "url": "burntfen.com"
+  },
+  "bin": "cli.js",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "lint": "standard",
+    "test": "standard && ava"
+  },
+  "files": [
+    "index.js",
+    "cli.js"
+  ],
+  "keywords": [
+    "cli-app",
+    "cli",
+    ""
+  ],
+  "dependencies": {
+    "bluebird": "^3.1.1",
+    "ghauth": "^3.2.0",
+    "is-array": "^1.0.1",
+    "meow": "^3.6.0",
+    "octokat": "^0.4.16"
+  },
+  "devDependencies": {
+    "standard": "^5.4.1",
+    "ava": "^0.9.1"
+  },
+  "standard": {
+    "ignore": [
+      "test.js"
+    ]
+  }
+}
