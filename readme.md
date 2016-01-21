@@ -15,30 +15,36 @@ $ npm install --save gh-description
 ```js
 const ghDescription = require('gh-description');
 
-ghDescription('unicorns');
+ghDescription('RichardLitt/gh-description');
+//=> 'Set and get a GitHub repository description'
+ghDescription('RichardLitt/gh-description', 'unicorns & rainbows');
 //=> 'unicorns & rainbows'
 ```
 
 
 ## API
 
-### ghDescription(input, [options])
+### ghDescription(repoName, description, [options], token)
 
-#### input
+#### repoName
 
 Type: `string`
 
-Lorem ipsum.
+The name for the repository to test.
+
+#### description
+
+Type: `string`
+
+The new description to set. To set, you must also supply the repoName first.
 
 #### options
 
-##### foo
+None.
 
-Type: `boolean`  
-Default: `false`
+#### token
 
-Lorem ipsum.
-
+Your GitHub access token, if not set as an env variable or supplied in the CLI.
 
 ## CLI
 
@@ -50,16 +56,13 @@ $ npm install --global gh-description
 $ gh-description --help
 
   Usage
-    gh-description [input]
-
-  Options
-    --foo  Lorem ipsum. [Default: false]
+    $ gh-description
 
   Examples
     $ gh-description
-    unicorns & rainbows
-    $ gh-description ponies
-    ponies & rainbows
+    Current description: Set and get a GitHub repository description
+    $ gh-description RichardLitt/gh-description 'ponies and unicorns'
+    New description: ponies and unicorns
 ```
 
 

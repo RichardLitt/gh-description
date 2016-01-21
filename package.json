@@ -9,6 +9,7 @@
     "email": "richard.littauer@gmail.com",
     "url": "burntfen.com"
   },
+  "main": "index.js",
   "bin": "cli.js",
   "engines": {
     "node": ">=0.10.0"
@@ -29,9 +30,11 @@
   "dependencies": {
     "bluebird": "^3.1.1",
     "ghauth": "^3.2.0",
+    "gitconfig": "^1.3.1",
     "is-array": "^1.0.1",
     "meow": "^3.6.0",
-    "octokat": "^0.4.16"
+    "octokat": "^0.4.16",
+    "pify": "^2.3.0"
   },
   "devDependencies": {
     "standard": "^5.4.1",

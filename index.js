@@ -4,40 +4,40 @@ const Octokat = require('octokat')
 const Promise = require('bluebird')
 var octo
 
-module.exports = function (input, flags, token) {
-  if (typeof input[0] !== 'string') {
+module.exports = function (repoName, description, flags, token) {
+  if (typeof repoName !== 'string') {
     throw new TypeError('Expected a string')
+  }
+  if (repoName.split('/').length !== 2) {
+    throw new Error('Not a repository name in form \'user/repo\'')
   }
 
   return Promise.resolve().then(() => {
     octo = new Octokat({
-      token: process.env.GITHUB_OGN_TOKEN
+      token: token || process.env.GITHUB_OGN_TOKEN
     })
   }).then(() => {
-    var repoName = input[0].split('/')
-    if (repoName.length !== 2) {
-      throw new Error('Not a valid repo')
-    }
+    var repoName = repoName.split('/')
     return octo.repos(repoName[0], repoName[1]).fetch()
   }).then(function (result) {
-    console.log(result.description)
-    if (input[1]) {
+    if (description) {
       return Promise.try(() => {
-        console.log(result.owner.login, result.name, input[1])
         return octo.repos(result.owner.login, result.name).update({
-          description: 'test'
+          'description': description,
+          'name': result.name
         })
       }).then((result) => {
-        return result
+        return { method: 'patch', description: result.description }
       }).catch((err) => {
+        console.log(err)
         throw ('Unable to set description', err)
       })
     } else {
-      return result.description
+      return { method: 'get', description: result.description }
     }
   }).catch(function (err) {
     if (err.status === 404) {
-      return []
+      return err
     } else {
       throw ('Could not get GitHub user', err)
     }
