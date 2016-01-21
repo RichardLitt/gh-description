@@ -16,8 +16,9 @@ module.exports = function (repoName, description, flags, token) {
     octo = new Octokat({
       token: token || process.env.GITHUB_OGN_TOKEN
     })
-  }).then(() => {
-    var repoName = repoName.split('/')
+    return repoName
+  }).then((repoName) => {
+    repoName = repoName.split('/')
     return octo.repos(repoName[0], repoName[1]).fetch()
   }).then(function (result) {
     if (description) {
