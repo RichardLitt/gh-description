@@ -7,7 +7,7 @@
   "author": {
     "name": "Richard Littauer",
     "email": "richard.littauer@gmail.com",
-    "url": "burntfen.com"
+    "url": "http://burntfen.com"
   },
   "main": "index.js",
   "bin": "cli.js",
@@ -18,14 +18,18 @@
     "lint": "standard",
     "test": "standard && ava"
   },
-  "files": [
-    "index.js",
-    "cli.js"
-  ],
   "keywords": [
     "cli-app",
     "cli",
-    ""
+    "github",
+    "git",
+    "description",
+    "descriptions",
+    "repo",
+    "reository",
+    "set",
+    "get",
+    "desc"
   ],
   "dependencies": {
     "bluebird": "^3.1.1",
@@ -39,10 +43,5 @@
   "devDependencies": {
     "standard": "^5.4.1",
     "ava": "^0.9.1"
-  },
-  "standard": {
-    "ignore": [
-      "test.js"
-    ]
   }
 }
