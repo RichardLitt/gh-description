@@ -9,7 +9,6 @@
     "email": "richard.littauer@gmail.com",
     "url": "http://burntfen.com"
   },
-  "main": "index.js",
   "bin": "cli.js",
   "engines": {
     "node": ">=0.10.0"
