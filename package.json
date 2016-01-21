@@ -1,6 +1,6 @@
 {
   "name": "gh-description",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Set and get a GitHub repository description",
   "license": "MIT",
   "repository": "RichardLitt/gh-description",
