@@ -44,8 +44,8 @@ Promise.try(() => {
   if (!response.method) {
     console.log(response)
   } else if (response.method === 'patch') {
-    console.log(`New description: ${response.description}`)
+    console.log(`New description:\n${response.description}`)
   } else if (response.method === 'get') {
-    console.log(`Current description: ${response.description}`)
+    console.log(`${response.description}`)
   }
 })
