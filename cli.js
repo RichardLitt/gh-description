@@ -37,7 +37,7 @@ Promise.try(() => {
   if (res && cli.input.length === 0) {
     cli.input[0] = res
   }
-  return ghauth(authOptions)
+  return (cli.input[1]) ? ghauth(authOptions) : { token: null }
 }).then((authData) => {
   return ghDescription(cli.input[0], cli.input[1], cli.flags, authData.token)
 }).then(function (response) {
