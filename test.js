@@ -7,9 +7,9 @@ test('get description', t => {
   })
 })
 
-test('patch description', t => {
-  return fn('RichardLitt/gh-description', 'Set and get a GitHub repository description').then(result => {
-    t.same(result, {method: 'patch', description: 'Set and get a GitHub repository description'})
-  })
-})
+// test('patch description', t => {
+//   return fn('RichardLitt/gh-description', 'Set and get a GitHub repository description').then(result => {
+//     t.same(result, {method: 'patch', description: 'Set and get a GitHub repository description'})
+//   })
+// })
 
