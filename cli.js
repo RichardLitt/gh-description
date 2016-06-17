@@ -31,7 +31,12 @@ Promise.try(() => {
   return pify(gitconfig)(process.cwd())
 }).then(config => {
   if (config && config.remote && config.remote.origin && config.remote.origin.url) {
-    return config.remote.origin.url.split(':')[1].split('.git')[0]
+    var url = config.remote.origin.url
+    if (!url.match(/^https:\/\/github.com/)) {
+      return url.split(':')[1].split('.git')[0]
+    } else {
+      return url.split('github.com/')[1]
+    }
   }
 }).then((res) => {
   if (res && cli.input.length === 0) {
