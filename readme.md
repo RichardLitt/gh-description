@@ -1,14 +1,17 @@
-# gh-description [![Build Status](https://travis-ci.org/RichardLitt/gh-description.svg?branch=master)](https://travis-ci.org/RichardLitt/gh-description)
+# gh-description
+
+[![Build Status](https://travis-ci.org/RichardLitt/gh-description.svg?branch=master)](https://travis-ci.org/RichardLitt/gh-description)
+[![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
 
 > Set and get a GitHub repository description
-
 
 ## Install
 
 ```
-$ npm install --save gh-description
+npm install --save gh-description
 ```
 
+Note: You will need to set credentials using [ghauth](https://github.com/rvagg/ghauth) if you plan on setting data.
 
 ## Usage
 
@@ -20,7 +23,6 @@ ghDescription('RichardLitt/gh-description');
 ghDescription('RichardLitt/gh-description', 'unicorns & rainbows');
 //=> 'unicorns & rainbows'
 ```
-
 
 ## API
 
@@ -49,7 +51,7 @@ Your GitHub access token, if not set as an env variable or supplied in the CLI.
 ## CLI
 
 ```
-$ npm install --global gh-description
+npm install --global gh-description
 ```
 
 ```
@@ -65,6 +67,9 @@ $ gh-description --help
     New description: ponies and unicorns
 ```
 
+## Contribute
+
+PRs and [issues](https://github.com/RichardLitt/gh-description/issues) gladly accepted!
 
 ## License
 
