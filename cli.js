@@ -8,9 +8,9 @@ const gitconfig = require('gitconfiglocal')
 const pify = require('pify')
 const ghauth = Promise.promisify(require('ghauth'))
 const authOptions = {
-  configName: 'ghauth',
+  configName: 'gh-description',
   note: 'Set and get a GitHub repository description',
-  userAgent: 'ghDesc',
+  userAgent: 'github.com/RichardLitt/gh-description',
   scope: ['repo']
 }
 
