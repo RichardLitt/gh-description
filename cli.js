@@ -20,7 +20,9 @@ var cli = meow([`
 
   Examples
     $ gh-description
-    Current description: Set and get a GitHub repository description
+    Set and get a GitHub repository description
+    $ gh-description RichardLitt/gh-description
+    Set and get a GitHub repository description
     $ gh-description RichardLitt/gh-description 'ponies and unicorns'
     New description: ponies and unicorns
 `, {
