@@ -33,15 +33,15 @@
   "dependencies": {
     "bluebird": "^3.1.1",
     "ghauth": "^3.2.0",
-    "gitconfiglocal": "^1.0.0",
+    "gitconfiglocal": "^2.0.1",
     "is-array": "^1.0.1",
     "meow": "^3.6.0",
-    "octokat": "^0.4.16",
+    "octokat": "^0.6.2",
     "pify": "^2.3.0"
   },
   "devDependencies": {
-    "standard": "^5.4.1",
-    "ava": "^0.9.1"
+    "standard": "^8.6.0",
+    "ava": "^0.17.0"
   },
   "coordinates": [
     38.7356382,
