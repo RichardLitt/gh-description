@@ -11,7 +11,7 @@ const authOptions = {
   configName: 'gh-description',
   note: 'Set and get a GitHub repository description',
   userAgent: 'github.com/RichardLitt/gh-description',
-  scope: ['repo']
+  scopes: ['repo']
 }
 
 var cli = meow([`
