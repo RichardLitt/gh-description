@@ -11,9 +11,11 @@
 npm install --save gh-description
 ```
 
-Note: You will need to set credentials using [ghauth](https://github.com/rvagg/ghauth) if you plan on setting data. This will be used for the CLI tool, and the token will be stored in your `~Library`. To edit this file later, see [this module](https://github.com/LinusU/node-application-config). Your token will need to have access to `repo` credentials. You can manually manage these [here](https://github.com/settings/tokens).
+or
 
-If you are importing this package and using the index.js file, or running the tests, you will need to set the token as an environmental variable. Set it to: `GH_DESCRIPTION_TOKEN`.
+```
+npm install --global gh-description
+```
 
 ## Usage
 
@@ -52,9 +54,9 @@ Your GitHub access token, if not set as an env variable or supplied in the CLI.
 
 ## CLI
 
-```
-npm install --global gh-description
-```
+The `gh-description` command uses [ghauth](https://github.com/rvagg/ghauth) to generate and [locally store](https://github.com/LinusU/node-application-config#config-location) a GitHub API personal token.
+
+You can skip this step by [manually generating a token](https://help.github.com/articles/creating-an-access-token-for-command-line-use/) and setting it as an environment variabled named `GH_DESCRIPTION_TOKEN`.
 
 ```
 $ gh-description --help
