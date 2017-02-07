@@ -3,10 +3,9 @@
 
 const meow = require('meow')
 const ghDescription = require('./')
-const Promise = require('bluebird')
 const gitconfig = require('gitconfiglocal')
 const pify = require('pify')
-const ghauth = Promise.promisify(require('ghauth'))
+const ghauth = pify(require('ghauth'))
 const authOptions = {
   configName: 'gh-description',
   note: 'Set and get a GitHub repository description',
@@ -29,9 +28,8 @@ var cli = meow([`
   alias: {}
 }])
 
-Promise.try(() => {
-  return pify(gitconfig)(process.cwd())
-}).then(config => {
+pify(gitconfig)(process.cwd())
+.then(config => {
   if (config && config.remote && config.remote.origin && config.remote.origin.url) {
     var url = config.remote.origin.url
     return url.match(/([^/:]+\/[^/.]+)(\.git)?$/)[1]
