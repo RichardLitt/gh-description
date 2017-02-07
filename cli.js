@@ -34,11 +34,7 @@ Promise.try(() => {
 }).then(config => {
   if (config && config.remote && config.remote.origin && config.remote.origin.url) {
     var url = config.remote.origin.url
-    if (!url.match(/^https:\/\/github.com/)) {
-      return url.split(':')[1].split('.git')[0]
-    } else {
-      return url.split('github.com/')[1]
-    }
+    return url.match(/([^/]+\/[^/.]+)(\.git)?$/)[1]
   }
 }).then((res) => {
   if (res && cli.input.length === 0) {
