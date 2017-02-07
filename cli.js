@@ -34,7 +34,7 @@ Promise.try(() => {
 }).then(config => {
   if (config && config.remote && config.remote.origin && config.remote.origin.url) {
     var url = config.remote.origin.url
-    return url.match(/([^/]+\/[^/.]+)(\.git)?$/)[1]
+    return url.match(/([^/:]+\/[^/.]+)(\.git)?$/)[1]
   }
 }).then((res) => {
   if (res && cli.input.length === 0) {
