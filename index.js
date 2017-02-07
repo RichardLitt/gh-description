@@ -1,7 +1,6 @@
 'use strict'
 
 const Octokat = require('octokat')
-const Promise = require('bluebird')
 var octo
 
 module.exports = function (repoName, description, flags, token) {
@@ -22,11 +21,9 @@ module.exports = function (repoName, description, flags, token) {
     return octo.repos(repoName[0], repoName[1]).fetch()
   }).then(function (result) {
     if (description) {
-      return Promise.try(() => {
-        return octo.repos(result.owner.login, result.name).update({
-          'description': description,
-          'name': result.name
-        })
+      return octo.repos(result.owner.login, result.name).update({
+        'description': description,
+        'name': result.name
       }).then((result) => {
         return { method: 'patch', description: result.description }
       }).catch((err) => {
