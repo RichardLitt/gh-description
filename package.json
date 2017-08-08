@@ -1,6 +1,6 @@
 {
   "name": "gh-description",
-  "version": "0.1.0",
+  "version": "0.1.12",
   "description": "Set and get a GitHub repository description",
   "license": "MIT",
   "repository": "RichardLitt/gh-description",
@@ -31,19 +31,19 @@
     "desc"
   ],
   "dependencies": {
-    "ghauth": "^3.2.0",
+    "ghauth": "^3.2.1",
     "gitconfiglocal": "^2.0.1",
     "is-array": "^1.0.1",
-    "meow": "^3.6.0",
-    "octokat": "^0.6.2",
-    "pify": "^2.3.0"
+    "meow": "^3.7.0",
+    "octokat": "^0.9.0",
+    "pify": "^3.0.0"
   },
   "devDependencies": {
-    "standard": "^8.6.0",
-    "ava": "^0.18.1"
+    "standard": "^10.0.2",
+    "ava": "^0.19.1"
   },
   "coordinates": [
-    45.51918389999999,
-    -73.57894999999999
+    45.5191944,
+    -73.5789203
   ]
 }
