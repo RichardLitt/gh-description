@@ -63,7 +63,7 @@ Your GitHub access token, if not set as an env variable or supplied in the CLI.
 
 The `gh-description` command uses [ghauth](https://github.com/rvagg/ghauth) to generate and [locally store](https://github.com/LinusU/node-application-config#config-location) a GitHub API personal token.
 
-You can skip this step by [manually generating a token](https://help.github.com/articles/creating-an-access-token-for-command-line-use/) and setting it as an environment variabled named `GH_DESCRIPTION_TOKEN`.
+You can skip this step by [manually generating a token](https://help.github.com/articles/creating-an-access-token-for-command-line-use/) and setting it as an environment variable named `GH_DESCRIPTION_TOKEN`.
 
 ```
 $ gh-description --help
