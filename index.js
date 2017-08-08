@@ -4,6 +4,8 @@ const Octokat = require('octokat')
 var octo
 
 module.exports = function (repoName, description, flags, token) {
+  flags = flags || {}
+
   if (typeof repoName !== 'string') {
     throw new TypeError('Expected a string')
   }
