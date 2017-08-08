@@ -46,7 +46,14 @@ The new description to set. To set, you must also supply the repoName first.
 
 #### options
 
-None.
+##### enterprise
+
+Type: `bool` or `string`
+
+Specify a different endpoint for the GitHub URL. Useful for GitHub Enterprise.
+Setting this flag as a boolean will automatically pull from the environmental variable `GITHUB_ENDPOINT`.
+
+Alias: `e`
 
 #### token
 
@@ -62,13 +69,22 @@ You can skip this step by [manually generating a token](https://help.github.com/
 $ gh-description --help
 
   Usage
-    $ gh-description
+    $ gh-description [input]
+
+  Options
+    -e, --enterprise  Specify a different GitHub endpoint
 
   Examples
     $ gh-description
-    Current description: Set and get a GitHub repository description
+    Set and get a GitHub repository description
+    $ gh-description RichardLitt/gh-description
+    Set and get a GitHub repository description
     $ gh-description RichardLitt/gh-description 'ponies and unicorns'
     New description: ponies and unicorns
+    $ gh-description RichardLitt/gh-description -e
+    New enterprise description: Engage
+    $ gh-description RichardLitt/gh-description -e https://scottymcscottface.co.uk
+    New enterprise description: Beam Me Up
 ```
 
 ## Contribute

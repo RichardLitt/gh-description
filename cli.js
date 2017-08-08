@@ -17,6 +17,9 @@ var cli = meow([`
   Usage
     $ gh-description [input]
 
+  Options
+    -e, --enterprise  Specify a different GitHub endpoint
+
   Examples
     $ gh-description
     Set and get a GitHub repository description
@@ -24,9 +27,15 @@ var cli = meow([`
     Set and get a GitHub repository description
     $ gh-description RichardLitt/gh-description 'ponies and unicorns'
     New description: ponies and unicorns
-`, {
-  alias: {}
-}])
+    $ gh-description RichardLitt/gh-description -e
+    New enterprise description: Engage
+    $ gh-description RichardLitt/gh-description -e https://scottymcscottface.co.uk
+    New enterprise description: Beam Me Up
+`], {
+  alias: {
+    e: 'enterprise'
+  }
+})
 
 pify(gitconfig)(process.cwd())
 .then(config => {

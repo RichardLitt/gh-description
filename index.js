@@ -11,9 +11,14 @@ module.exports = function (repoName, description, flags, token) {
     throw new Error('Not a repository name in form \'user/repo\'')
   }
 
+  if (flags.enterprise && typeof flags.enterprise === 'boolean') {
+    flags.enterprise = process.env.GITHUB_ENDPOINT
+  }
+
   return Promise.resolve().then(() => {
     octo = new Octokat({
-      token: token || process.env.GH_DESCRIPTION_TOKEN
+      token: token || process.env.GH_DESCRIPTION_TOKEN,
+      rootURL: flags.enterprise
     })
     return repoName
   }).then((repoName) => {
