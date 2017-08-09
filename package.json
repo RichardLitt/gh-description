@@ -1,6 +1,6 @@
 {
   "name": "gh-description",
-  "version": "0.1.13",
+  "version": "0.1.14",
   "description": "Set and get a GitHub repository description",
   "license": "MIT",
   "repository": "RichardLitt/gh-description",
@@ -43,7 +43,7 @@
     "ava": "^0.21.0"
   },
   "coordinates": [
-    45.5191962,
-    -73.5789449
+    45.5191959,
+    -73.5788979
   ]
 }
