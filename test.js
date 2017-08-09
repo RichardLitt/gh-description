@@ -12,4 +12,3 @@ test('patch description', t => {
     t.deepEqual(result, {method: 'patch', description: 'Set and get a GitHub repository description'})
   })
 })
-
