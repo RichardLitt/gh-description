@@ -19,7 +19,7 @@ module.exports = function (repoName, description, flags, token) {
 
   return Promise.resolve().then(() => {
     octo = new Octokat({
-      token: token || process.env.GH_DESCRIPTION_TOKEN,
+      token: token || (flags.enterprise) ? null : process.env.GH_DESCRIPTION_TOKEN,
       rootURL: flags.enterprise
     })
     return repoName

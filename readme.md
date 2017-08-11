@@ -53,6 +53,8 @@ Type: `bool` or `string`
 Specify a different endpoint for the GitHub URL. Useful for GitHub Enterprise.
 Setting this flag as a boolean will automatically pull from the environmental variable `GITHUB_ENDPOINT`.
 
+If using `enterprise`, the token must be explicitly set and cannot be passed through from the environment. This is to ensure that bad credentials from the public GitHub don't mess up the works.
+
 Alias: `e`
 
 #### token
