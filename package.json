@@ -40,7 +40,7 @@
   },
   "devDependencies": {
     "standard": "^10.0.2",
-    "ava": "^0.21.0"
+    "ava": "^0.22.0"
   },
   "coordinates": [
     45.5191959,

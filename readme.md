@@ -1,5 +1,7 @@
 # gh-description
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/RichardLitt/gh-description.svg)](https://greenkeeper.io/)
+
 [![Build Status](https://travis-ci.org/RichardLitt/gh-description.svg?branch=master)](https://travis-ci.org/RichardLitt/gh-description)
 [![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
 
